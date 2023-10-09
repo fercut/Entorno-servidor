@@ -3,6 +3,6 @@
           if(String(arr[i]).includes('7')){
             return 'Boom!';
           }
-     }
+        }
      return 'there is no 7 in the array';
   }
