@@ -10,9 +10,13 @@
     "dev": "nodemon index.js",
     "date": "node ./date.js",
     "crear": "mkdir files",
-    "crear:js": "node createJS",
+    "crear:js": "cmd /c \"echo. > .\\files\\%1.js\"",
     "crear:carpeta": "mkdir --",
-    "borrar": "rm  -r /files/*"
+    "borrar": "del /Q .\\files\\*",
+    "borrar:js": "del /Q .\\files\\*.js",
+    "imprime:azul": "node ./azul.js",
+    "imprime:rojo": "node ./rojo.js",
+    "imprime:verde": "node ./verde.js"
     
     
   },
