@@ -16,7 +16,7 @@
     "test:report": "nyc --reporter=html ava",
     "test:purge": "rm -r .nyc_output .scannerwork coverage"
   },
-  "author": "Andrea Angel",
+  "author": "Fermin Fernandez",
   "license": "ISC",
   "devDependencies": {
     "@jest/globals": "^29.3.0",
