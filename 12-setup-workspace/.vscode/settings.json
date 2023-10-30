@@ -1,0 +1,24 @@
+{
+  "workbench.iconTheme": "vscode-seedling-icon-theme",
+
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Current",
+        "skipFiles": [
+          "<node_internals>/**"
+        ]
+      }
+    ],
+    "compounds": []
+  },
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+  },
+  "editor.dragAndDrop": false,
+  "terminal.integrated.tabs.title": "${cwd}"
+}
