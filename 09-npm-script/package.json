@@ -17,8 +17,6 @@
     "imprime:azul": "node ./azul.js",
     "imprime:rojo": "node ./rojo.js",
     "imprime:verde": "node ./verde.js"
-    
-    
   },
   "author": "",
   "license": "MIT",

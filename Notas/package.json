@@ -1,0 +1,16 @@
+{
+  "name": "notas",
+  "version": "1.0.0",
+  "description": "Editor de Notas",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "crearnota": "node -e \"require('./index').crearNuevaNota(process.argv.slice(2).join(' '))\""
+  },
+  "keywords": [
+    "notas"
+  ],
+  "author": "Fermin",
+  "license": "MIT"
+}
