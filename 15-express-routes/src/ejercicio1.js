@@ -8,6 +8,8 @@ server.use(express.json());
 server.use(express.urlencoded({extended: true}));
 
 server.get('/ping', (req,res) => res.send('pong'));
+
+// Ejercicio 1
 server.get('/header', (req, res) => {
   if(req.headers.token){
     console.log(req.headers.token);
@@ -21,8 +23,10 @@ server.get('/header', (req, res) => {
   }
 });
 
+//Ejercicio 2
 server.get('/params/:name', (req, res) => res.send(`Hello ${req.params.name}!`));
 
+// Ejercicio 3
 server.get('/query', (req, res) => {
  
   if (isNaN(parsedN) || parsedN < 1) {
@@ -36,11 +40,14 @@ server.get('/query', (req, res) => {
   const {n=100} = req.query;
   
   let resultado = 0;
-  for(let i = 1; i <= parseInt(n); i++ ){
+  for(let i = 1; i <= n; i++ ){
       resultado += i;
   }
   res.status(200).send(resultado); 
 });
+
+// Ejercicio 4
+
 
 
 server.listen(port, ()=>{
