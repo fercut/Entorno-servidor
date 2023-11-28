@@ -1,0 +1,22 @@
+{
+  "name": "18-rest-api",
+  "version": "1.0.0",
+  "description": "tema 18",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "author": "Fermin Fernandez",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "eslint": "^7.32.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14",
+    "editorconfig": "^0.15.7"
+  }
+}
