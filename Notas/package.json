@@ -7,7 +7,7 @@
   "scripts": {
     "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "@comment notas": "Atajamos la ejecución de notas entrando directamente a las opciones.",
+    "@comment notas": "Atajos",
     "notas-crear": "node Notas.js 1",
     "notas-editar": "node Notas.js 2",
     "notas-eliminar": "node Notas.js 3",
@@ -35,6 +35,9 @@
     "jest": "^29.3.1",
     "sinon": "^15.0.1",
     "winston": "^3.8.2",
-    "morgan": "^1.10.0"  
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^4.6.0",
+    "js-yaml": "^4.1.0",
+    "express-openapi-validator": "^5.0.1"
   }
 }
