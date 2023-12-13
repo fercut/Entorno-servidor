@@ -7,7 +7,7 @@ const {
 const router = express.Router();
 
 router.get('/', recogerNotas);
-// router.get('/:name', recogerNota);
+router.get('/:name', recogerNotas);
 router.post('/', crearNota);
 router.put('/:name', editarNota);
 router.delete('/:name', eliminarNota);
