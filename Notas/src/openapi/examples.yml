@@ -1,4 +1,0 @@
-components:
-  examples:
-    Nota:
-      $ref: '#/components/schemas/Nota'

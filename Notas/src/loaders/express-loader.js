@@ -11,7 +11,7 @@ export default function (server){
 	
   server.use(cors());
 	server.use(express.json());
-	server.use(express.urlencoded());
+	server.use(express.urlencoded({ extended: true }));
   
   server.use('/api-docs', swaggerUi.serve);
   server.get('/api-docs', swaggerUi.setup(swaggerDoc));

@@ -1,9 +1,3 @@
-import config from '../config';
+import logger from './logger.js';
 
-function getPath(name) {
-  return `./${config.notes.folder}/${name}.${config.notes.ext}`;
-}
-
-module.exports = {
-  getPath,
-};
+export default logger;
