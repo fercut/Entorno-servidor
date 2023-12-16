@@ -1,3 +1,5 @@
+// Primer ejercicio hecho por consola
+
 const fs = require('fs');
 const readline = require('readline');
 

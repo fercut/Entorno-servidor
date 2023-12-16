@@ -1,9 +1,5 @@
-const expressLoader = require('./express');
+import expressLoader from './express-loader.js';
 
-function init(app, config) {
-  expressLoader(app);
+export function init (server){
+	expressLoader(server);
 }
-
-module.exports = {
-  init,
-};

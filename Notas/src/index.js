@@ -1,13 +1,10 @@
-const express = require('express');
+import dotenv from 'dotenv';
+import app from './app.js';
+import logger from './utils/index.js';
 
-const server = express();
-const loaders = require('./loaders');
-const config = require('./config');
-const { logger } = require('./utils');
+dotenv.config();
+const port = process.env.PORT || 3000;
 
-const { port } = config;
-
-loaders.init(server);
-server.listen(port, () => {
-  logger.info(`Listening the port ${port}`);
+app.listen(port, () => {
+  logger.info(`Servidor ok en http://localhost:${port}`);
 });

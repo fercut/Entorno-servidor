@@ -1,9 +1,7 @@
-const express = require('express');
-const loaders = require('./loaders');
-const config = require('./config');
+import express from 'express';
+import * as loader from './loaders/index.js';
 
-const app = express();
+const server = express();
+loader.init(server);
 
-loaders.init(app, config);
-
-module.exports = app;
+export default server;

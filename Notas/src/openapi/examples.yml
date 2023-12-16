@@ -1,3 +1,4 @@
-Nota:
-  name: Hola
-  data: Hola undo!
+components:
+  examples:
+    Nota:
+      $ref: '#/components/schemas/Nota'

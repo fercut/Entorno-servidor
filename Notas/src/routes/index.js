@@ -1,13 +1,14 @@
-const express = require('express');
-
-const { rootController } = require('../controllers');
-const { recogerNotas } = require('../controllers/notas');
-const notasRouter = require('./notas');
+import express from 'express';
+import authMiddleware from '../middlewares/auth-middleware.js';
+import { upload } from '../services/multer.js';
+import notesRouter from './notes.js';
+import authRouter from './auth.js';
+import uploadRotuer from './upload.js';
 
 const router = express.Router();
 
-router.post('/', rootController);
-router.use('/notas', notasRouter);
-router.get('/notas', recogerNotas);
+router.use('/notes',authMiddleware, notesRouter);
+router.use('/auth', authRouter);
+router.use('/files', upload.single('file'), uploadRotuer);
 
-module.exports = router;
+export default router;
