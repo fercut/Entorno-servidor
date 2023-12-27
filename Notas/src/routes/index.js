@@ -7,7 +7,8 @@ import uploadRotuer from './upload.js';
 
 const router = express.Router();
 
-router.use('/notes',authMiddleware, notesRouter);
+router.use('/notes',authMiddleware,
+ notesRouter);
 router.use('/auth', authRouter);
 router.use('/files', upload.single('file'), uploadRotuer);
 

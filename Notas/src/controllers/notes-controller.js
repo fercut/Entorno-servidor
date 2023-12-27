@@ -38,7 +38,7 @@ export async function getNotes(req, res, next) {
     );
 
     const response =
-      paginatedNotes.length > 0 ? { notes: paginatedNotes } : { notes: "We couldn't find any notes" };
+      paginatedNotes.length > 0 ? { notes: paginatedNotes } : { notes: "No pudimos encontrar ninguna nota." };
     res.status(200).send(response);
   } catch (error) {
     next(error);
