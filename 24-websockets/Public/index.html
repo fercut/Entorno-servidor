@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba socket.io</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.3/socket.io.js"></script>
+    <script defer>
+        const createLi = (text) => {
+            const li = document.getElementById('li');
+            li.innerText = text;
+            return li;
+        };
+
+        const socket = io();
+
+        socket.on('single', (data) =>{
+            console.log(data);
+        });
+
+        const init = () => {
+
+            const ul = document.getElementById('list');
+            socket.on('all', (data) =>{
+                console.log(data);
+                ul.appendChild(createLi(data));
+            });
+            
+            const dateText = document.getElementById('date');
+            const date = new Date();
+            dateText.innerText =date.toLocaleDateString;
+            socket.on('date', (data) =>{
+                dataTwxt.innerText = data;
+            });
+        };
+
+        const send = () => {
+            const input =document.getElementById('input');
+            socket.emit('echo', input.value);
+        };
+    </script>
+</head>
+<body>
+    <h1>Websocket</h1>
+    <p>Open the console to see the messages</p>
+    <div>
+        <h2 id="date"></h2>
+        <button onclick="send()">Click me</button>
+        <input type="text" id="input">
+        <ul id="list"></ul>
+    </div>
+
+</body>
+</html>

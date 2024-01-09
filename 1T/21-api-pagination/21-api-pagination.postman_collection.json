@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "2b74fdd9-b992-4c0c-8bfd-a032e787ae61",
+		"name": "21-api-pagination",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31433801"
+	},
+	"item": [
+		{
+			"name": "Get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get order users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/order-users?sort=name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"order-users"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get filter users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/filter-users?name=M",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"filter-users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "M"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get pagination users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/paginate-users?page=1&pageSize=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"paginate-users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
