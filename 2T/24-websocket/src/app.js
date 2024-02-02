@@ -1,8 +1,8 @@
 import express from 'express';
 
+
 const server = express();
 
-server.use(express.static('Public'));
-//loader.init(server);
+server.use(express.static('public'))
 
 export default server;
