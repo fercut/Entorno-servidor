@@ -4,9 +4,18 @@ services:
     image: mongo
     restart: always
     ports:
+<<<<<<< HEAD
       - 27017:27017
     volumes:
       - /data/mongo:/data/db
 volumes:
   mongo:
     external: true
+=======
+      - 27017:27017  
+    volumes:
+      - /mongo/data/db
+volumes:
+  mongo: 
+    external: true
+>>>>>>> dfd062b0318b791dd9ba09840a4be63e47b75ac7
