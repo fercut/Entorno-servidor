@@ -1,8 +1,6 @@
 import { createUser, getUsers } from '../services/database/User-db-service.js';
 import { encryptPassword } from '../utils/encrypt.js';
 
-
-
 export async function getUserController(req,res,next){
   try {
     const user = await getUsers(req.query);
