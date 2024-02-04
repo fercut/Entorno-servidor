@@ -15,6 +15,7 @@ export async function getUsers(filters){
   const cleanedQuery = Object.fromEntries(
     Object.entries(query).filter(([_, a]) => a !== undefined)
   );
+  console.log(cleanedQuery)
   const users = await User.find(cleanedQuery);
 
   return users;
