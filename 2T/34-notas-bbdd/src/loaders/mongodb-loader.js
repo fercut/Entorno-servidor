@@ -7,6 +7,6 @@ export default async function(config){
         await mongoose.connect(url);
         logger.info(`Connected to MongoDB at ${url}`);
     } catch(error){
-        logger.error(`Error connecting to MongoDB at ${url} \n${err}`);
+        logger.error(`Error connecting to MongoDB at ${url}`);
     }
 }

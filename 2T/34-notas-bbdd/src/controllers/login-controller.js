@@ -1,6 +1,6 @@
 import { HttpStatusError } from 'common-errors';
 import jwt from 'jsonwebtoken';
-import { getUserByName } from '../services/database/User-db-service.js';
+import { getUserByName } from '../services/database/user-db-service.js';
 import config from '../config.js';
 import { checkHash } from '../utils/encrypt.js';
 
@@ -25,7 +25,7 @@ export function login(req, res, next){
             next(error);
         }
 }
-    
+
 
 
 
